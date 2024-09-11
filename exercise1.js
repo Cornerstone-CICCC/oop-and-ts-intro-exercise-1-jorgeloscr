@@ -4,6 +4,24 @@
 
 class Car {
   // YOUR CODE HERE
+ 
+  constructor(make,model,year){
+    this.make = make
+    this.model = model
+    this.year = year
+
+  }
+  setYear(value){
+    
+    if(this.year >= value){
+      value = this.year     
+    }
+    this.year = value
+
+  }
+  getCarInfo(){
+    return `Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`
+  }
 }
 
 
@@ -14,3 +32,4 @@ car1.setYear(2015); // Should update the year
 console.log(car1.getCarInfo()); // Expected output: "Make: Toyota, Model: Corolla, Year: 2015"
 car1.setYear(2005); // Should not update the year
 console.log(car1.getCarInfo()); // Expected output: "Make: Toyota, Model: Corolla, Year: 2015"
+

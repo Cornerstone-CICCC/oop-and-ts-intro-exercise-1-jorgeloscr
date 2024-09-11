@@ -7,10 +7,34 @@
 
 class BankAccount {
   // YOUR CODE HERE
+  constructor(accountNumber,balance){
+
+    this.accountNumber = accountNumber
+    this.balance = balance
+
+  }
+
+  deposit(amount){
+     this.balance = this.balance + amount
+
+  }
+  withdraw(amount){
+     this.balance = this.balance - amount
+  }
+
+  static compareAccounts(account1, account2){
+    if(account1.balance > account2.balance){
+      return account1
+    }else{
+      return account2
+    }
+  }
+  
+
+
 }
 
-
-// TEST CASE / DRIVER CODE
+// // TEST CASE / DRIVER CODE
 const account1 = new BankAccount(123456, 500);
 const account2 = new BankAccount(654321, 1000);
 account1.deposit(300); // account1 becomes 800
